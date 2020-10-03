@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Armando Panman de Wit" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="theme-color" content="#EA2663">
+    <title>Automation Savings Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<div class="wrapper">
+    <h1 class="wrapper__title">Automation Savings Calculator</h2>
+        <form class="calculator">
+            <div class="calculator__row">
+                <label for="hours"> <i class="fas fa-clock"> </i> Hours (per week):</label>
+            </div>
+            <div class="calculator__row">
+                <input type="range" value="1" min="1" max="60" step="1" class="calculator__hours" id="hour"
+                    required=""><span class="hour-amount"></span>
+            </div>
+            <div class="calculator__row">
+                <label for="tip"><i class="fa fa-users"></i> People: </label>
+            </div>
+            <div class="calculator__row">
+                <input type="range" value="5" min="1" max="1000" step="10" class="calculator__people" id="people"
+                    required=""><span class="people-amount"></span>
+            </div>
+            <div class="calculator__row">
+                <label for="tip"> <i class="fas fa-money-check-alt"></i> Hourly rate: </label>
+            </div>
+            <div class="calculator__row">
+                <input type="range" min="10" max="100" value="20" step="10" class="calculator__rate" id="rate"
+                    required=""><span class="rate-amount"></span>
+            </div>
+            <div class="calculator__row">
+                <h2 class="calculator__info">Save: <span class="calculator__result"></span></h2>
+            </div>
+
+        </form>
+</div>

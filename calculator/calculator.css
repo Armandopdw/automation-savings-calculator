@@ -1,0 +1,225 @@
+
+.fas,
+  .fa {
+    font-size: 30px;
+  }
+
+  input[type=range] {
+
+    margin: 5.85px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+  }
+
+  input[type=range]:focus {
+    outline: none;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    background: #d7dcdf;
+    border: 0;
+    border-radius: 1px;
+    width: 100%;
+    height: 11.3px;
+    cursor: pointer;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    margin-top: -5.85px;
+    width: 23px;
+    height: 23px;
+    background: #205928;
+    border: 1.1px solid #000000;
+    border-radius: 12px;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #d7dcdf;
+  }
+
+  input[type=range]::-moz-range-track {
+    background: #d7dcdf;
+    border: 0;
+    border-radius: 1px;
+    width: 100%;
+    height: 11.3px;
+    cursor: pointer;
+  }
+
+  input[type=range]::-moz-range-thumb {
+    width: 23px;
+    height: 23px;
+    background: #205928;
+    border: 1.1px solid #000000;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 8.45px 0;
+    color: transparent;
+    width: 100%;
+    height: 11.3px;
+    cursor: pointer;
+  }
+
+  input[type=range]::-ms-fill-lower {
+    background: #d7dcdf;
+    border: 0;
+    border-radius: 2px;
+  }
+
+  input[type=range]::-ms-fill-upper {
+    background: #d7dcdf;
+    border: 0;
+    border-radius: 2px;
+  }
+
+  input[type=range]::-ms-thumb {
+    width: 23px;
+    height: 23px;
+    background: #205928;
+    border: 1.1px solid #000000;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 0px;
+    /*Needed to keep the Edge thumb centred*/
+  }
+
+  input[type=range]:focus::-ms-fill-lower {
+    background: #d7dcdf;
+  }
+
+  input[type=range]:focus::-ms-fill-upper {
+    background: #d7dcdf;
+  }
+
+  /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+  @supports (-ms-ime-align:auto) {
+
+    /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+    input[type=range] {
+      margin: 0;
+      /*Edge starts the margin from the thumb, not the track as other browsers do*/
+    }
+  }
+
+  .wrapper {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 60vw;
+    margin: 50px auto 0;
+    padding: 60px 30px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .wrapper {
+      /* Add shadows to create the "card" effect */
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 95vw;
+      margin: 50px auto 0;
+      padding: 60px 30px;
+    }
+  }
+
+  /* On mouse-over, add a deeper shadow */
+  .wrapper:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Add some padding inside the card container */
+  .calculator {
+    padding: 2px 16px;
+  }
+
+
+  .wrapper__title {
+    margin: 0 0 40px;
+    text-align: center;
+  }
+
+  .calculator__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 30px;
+  }
+
+  .calculator__row:last-child {
+    margin-bottom: 0;
+  }
+
+  .calculator__row label {
+    text-transform: capitalize;
+    font-weight: 700;
+    color:#929292;
+  }
+
+  .calculator__hours {
+    width: calc(100% - (60px + 13px))
+  }
+
+  .calculator__people {
+    width: calc(100% - (60px + 13px))
+  }
+
+  .calculator__rate {
+    width: calc(100% - (60px + 13px))
+  }
+
+  .calculator__info {
+    text-transform: capitalize;
+    margin: 0;
+  }
+
+  .calculator__result {
+    font-weight: 900;
+  }
+
+
+
+  .hour-amount,
+  .people-amount,
+  .rate-amount {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    background: #205928;
+    padding: 5px 10px;
+    margin-left: 8px;
+  }
+
+  .hour-amount::after,
+  .people-amount::after,
+  .rate-amount::after {
+    position: absolute;
+    top: 8px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 7px solid #205928;
+    border-bottom: 7px solid transparent;
+    content: '';
+  }
+
+::-moz-range-track {
+    background: 205928;
+    border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+    border: 0;
+}
