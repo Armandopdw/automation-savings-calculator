@@ -20,7 +20,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Armandopdw/automation-savings-calculator">
-    <img src="images/selenium_logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Automation Savings Calculator</h3>
